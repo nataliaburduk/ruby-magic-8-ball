@@ -9,7 +9,7 @@ local = gets.chomp.to_sym
 
 if local.empty?
   local = :en
-elsif languages.exclude?(local)
+elsif !languages.include?(local)
   puts 'We don\'t support this language'
   return
 end
